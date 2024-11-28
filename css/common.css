@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+#wrap{
+    min-width: 375px;
+    overflow: hidden;
+}
+
+.inner{
+    max-width: 1700px;
+    /* min-width: 1200px; */
+    margin: 0 auto;
+}
+
+
+
+/*********************모바일*********************/
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header .gnb{
+    display: none;
+}
+
+/*header*/
+header .inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    width: 250px;
+    height: 80px;
+    color: transparent;
+    font-size: 0;
+    background: url(../img/logo\(fff\).png) no-repeat center center / 250px auto;
+}
+header h1 > a{
+    display: block;
+    width: 250px;
+    height: 80px;
+}
+header .utill{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 20px;
+}
+header .lang a{
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.5;
+}
+header .lang a:first-child{
+    display: none;
+}
+header .lang a.active{
+    opacity: 1;
+}
+
+/*mgnb-wrap*/
+.mgnb-wrap{
+    min-width: 360px;
+    width: 70%;
+    height: 100vh;
+    padding: 70px 50px;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+.mgnb-wrap h2 img{
+    display: block;
+    width: 250px;
+}
+.mgnb-wrap .m-gnb{
+    margin: 0 30px;
+}
+.mgnb-wrap .m-gnb > li  a{
+    display: block;
+    transition: all 0.5s;
+}
+.mgnb-wrap .m-gnb > li  a:hover{
+    color: #0B3F0E;
+    font-weight: 500;
+}
+.mgnb-wrap .m-gnb > li > a{
+    font-size: 2rem;
+    margin: 33px 0;
+}
+.mgnb-wrap .mdepth2 > li > a{
+    font-size: 1.7rem;
+    margin-left: 30px;
+    margin-bottom: 6px;
+}
+.mgnb-wrap .mdepth2 > li  a{
+    position: relative;
+}
+.mgnb-wrap .mdepth2 > li  a::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+}
+.mgnb-wrap .mdepth3 > li > a{
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+.mgnb-wrap .mdepth3 > li  a::before{
+    height: 1px;
+}
+.mgnb-wrap .mdepth3{
+    margin-left: 30px;
+}
+.mgnb-wrap-bg{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.mgnb-close {
+    font-size: 2rem;
+    color: #002000;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+header .utill{
+    z-index: 999;
+}
+header .ham {
+    cursor: pointer;
+}
+header .ham span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    color: transparent;
+    font-size: 0;
+}
+header .ham::before{
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+header .ham::after{
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+
+
+/*footer*/
+footer{
+    background-color: #444444;
+    color: #fff;
+}
+footer .inner{
+    margin: 0 5%;
+}
+footer .top{
+    margin: 0 0 0 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+footer h2 a img{
+    display: block;
+    width: 250px;
+    padding: 50px 0 20px 0;
+}
+footer .info-box ul{
+    display: flex;
+    gap: 20px;
+}
+footer .info-box ul li a{
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+footer .info-box ul li:hover a{
+    opacity: 1;
+}
+
+footer .bottom{
+    margin: 20px 0 0 2%; 
+    padding-bottom:40px;
+}
+footer .bottom .txt-box{
+    opacity: 0.9;
+}
+footer address{
+    margin-bottom: 15px;
+}
+form{
+    display: none;
+}
+
+form select option:nth-child(1){
+    display: none;
+}
+
+
+
+
+/*********************데스크탑*********************/
+@media screen and (min-width : 1200px){
+
+    header{
+        transition: all 0.5s;
+        font-family: "Jacques Francois","Noto Sans KR", sans-serif;
+    }
+    header:hover h1{
+        color: transparent;
+        font-size: 0;
+        background:url(../img/logo\(000\).png) no-repeat left center / 250px auto;
+    }
+    header:hover a, header:hover .gnb > li a{
+        color: #000;
+    }
+    header:hover .lang a{
+        color: #000;
+        opacity: 0.5;
+    }
+    header:hover .lang a.active{
+        opacity: 1;
+    }
+    header:hover .gnb-bg{
+        border-top: 1px solid #000;
+    }
+    header:hover{
+        background-color: rgba(255,255,255,0.5);
+    }
+    header .inner{
+        align-items: center;
+        margin-bottom: 1px solid #fff;
+    }
+    header .gnb{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+        position: relative;
+    }
+    header .gnb > li{
+        width: 130px;
+        height: 29px;
+        z-index: 999;
+    }
+    header .gnb > li > a{
+        display: block;
+        color: #fff;
+        font-weight: 300;
+        transition: all 0.5s;
+        font-size: 2.2rem;
+        position: relative;
+    }
+    header .gnb > li > a::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 5px;
+        background-color: #000;
+        position: absolute;
+        top: 52px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+    }
+    header .gnb > li > a:hover::after{
+        width: 100%;
+    }   
+    header .lang{
+        display: flex;
+        gap: 10px;
+    }
+    header .lang a:first-child{
+        display: block;
+    }
+    header .lang a{
+        font-size: 2rem;
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    header .ham{
+        display: none;
+    }
+    header .gnb .depth2{
+        margin-top: 50px;
+    }
+    header .gnb .depth2 > li{
+        margin-left: 30px;
+        width: 150px;
+        margin-bottom: 5px;
+        opacity: 0.6;
+    }
+    header .gnb .depth2 > li:hover{
+        opacity: 1;
+    }
+    header .gnb .depth2 > li > a{
+        display: block;
+        font-size: 1.7rem;
+        text-align: left;
+    }
+    header .gnb-bg{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background-color: rgba(255,255,255,0.5);
+        border-top: 1px solid #fff;
+    }
+    header .gnb .depth3 > li > a{
+        display: block;
+        font-size: 1.5rem;
+    }
+    header .gnb .depth3 > li{
+        position: relative;
+        text-align: left;
+        margin-left: 20px;
+        opacity: 0.6;
+    }
+    header .gnb .depth3 > li:hover{
+        opacity: 1;
+    }
+    header .gnb .depth3 > li::before{
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        content: "";
+        display: block;
+        width: 5px;
+        height: 1px;
+        background-color: #000;
+    }
+        header .mgnb-wrap, header .mgnb-wrap-bg{
+        display: none;
+    }
+
+
+
+     /*footer*/
+    footer .top{
+        display: flex;
+        gap: 70px;
+        align-items: end;
+    }
+    footer .top h2 img{
+        padding-bottom: 0;
+    }
+    footer .top ul{
+        padding-bottom: 0;
+    }
+    footer .bottom{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    footer form{
+        display: block;
+    }
+    footer form select{
+        border: 0;
+        padding: 10px;
+    }
+    footer form select option{
+        padding: 5px 0;
+    }
+
+}
