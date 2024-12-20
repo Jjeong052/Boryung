@@ -262,6 +262,10 @@ section .viewmore{
 .product .icon-box ul li img{
     width: 100%;
     height: auto;
+    transition: all 0.5s;
+}
+.product .icon-box ul li:hover img{
+    transform: scale(1.2);
 }
 
 
